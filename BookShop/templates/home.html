@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+
+<!--Head-->
+
+{% block head%}
+
+<link rel="stylesheet" href="static/homeStyle.css">
+
+<!--These are some fonts from google-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+{% endblock %}
+
+
+
+<!--Body-->
+
+{% block body%}
+
+
+<!--First <h1>Logo here</h1> header-->
+<header>
+    <p>
+        <img src="static/logGPAB.png" alt="image">
+    </p>
+    <p class="logo">
+        <img src="static/Knowledge make you interesting.png" alt="image">
+    </p>
+
+
+</header>
+
+
+<!--Tell about the product-->
+
+<section id="product">
+    <h2> The Little Book of Main Street Money</h2>
+
+    <p>
+        Clements brings us back to basics, with commonsense
+        suggestions for intelligent money management. Chock-full of financial guidance that will stand up in
+        any market, the book also reflects a financial philosophy that Clements has developed over a lifetime
+        of watching Wall Street and writing about money―and that is even more important in the current volatile
+        market.
+    </p>
+    <p>
+
+    </p>
+</section>
+
+
+<!--Form-->
+
+<div id="tableContetnt">
+
+    <h2>Fill out the form to make your order</h2>
+
+    <!--Show some msg information-->
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for x in messages %}
+
+                <h2 style="color: white;">{{ x }}</h2>
+
+            {% endfor %}
+
+        {% endif %}
+
+    {% endwith %}
+
+
+    <form class="pform" action="/approve" method="post">
+
+
+        <!--1st row-->
+
+        <div class="tableRow">
+            <p>Number of books:</p>
+            <p>
+                <input type="number" name="book" min="1" max="10" value="1">
+            </p>
+        </div>
+
+        <!--2nd row-->
+
+        <div class="tableRow">
+            <p>Add extra CD:</p>
+            <p>
+                <input name="cd" type="number" min="0" max="2" value="0">
+            </p>
+        </div>
+
+        <!--3nd row-->
+
+        <div class="tableRow">
+            <p>Arrive by date:</p>
+            <p>
+                <input name="date" type="date" required>
+            </p>
+        </div>
+
+        <!--4rd row-->
+
+        <div class="tableRow">
+            <p>Name:</p>
+            <p>
+                <input name="name" type="text" value="" required>
+            </p>
+        </div>
+
+        <!--5th row-->
+
+        <div class="tableRow">
+            <p>Last Name:</p>
+            <p>
+                <input name="lastname" type="text" value="" required>
+            </p>
+        </div>
+
+        <!--6th row-->
+
+        <div class="tableRow">
+            <p>Country:</p>
+            <p>
+                <input name="country" type="text" value="" required>
+            </p>
+        </div>
+
+        <!--7th row-->
+
+        <div class="tableRow">
+            <p>City:</p>
+            <p>
+                <input name="city" type="text" value="" required>
+            </p>
+        </div>
+
+        <!--8th row-->
+
+        <div class="tableRow">
+            <p>Street:</p>
+            <p>
+                <input name="street" type="text" value="" required>
+            </p>
+        </div>
+
+        <!--9th row-->
+
+        <div class="tableRow">
+            <p>Zip:</p>
+            <p>
+                <input name="zip" type="number" value="" required>
+            </p>
+        </div>
+
+        <!--10th row-->
+
+        <div class="tableRow">
+            <p>Phone:</p>
+            <p>
+                <input name="phone" type="tel" pattern="^\d{3}-\d{3}-\d{4}$" placeholder="123-456-7890" required>
+            </p>
+        </div>
+
+
+        <!--Submit button-->
+
+        <div class="tableRow">
+
+            <p> </p>
+            <p>
+                <input id="send" value="Order now" type="submit">
+            </p>
+        </div>
+
+
+
+    </form>
+</div>
+
+
+<!--This is to thank the user for his order-->
+
+{% if draw == yes %}
+
+<div id="completed">
+
+    <form action="/home" method="post">
+        <p>
+            <button type="submit" name="res" value="clean">x</button>
+        </p>
+
+        <h2>
+            Your order has been successfully completed thank you!
+        </h2>
+    </form>
+
+</div>
+
+{% endif %}
+
+
+
+{% endblock %}

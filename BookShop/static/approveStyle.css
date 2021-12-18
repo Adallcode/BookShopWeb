@@ -1,0 +1,21 @@
+body{
+    background-color: white;
+}
+
+
+#tableContetnt h2{
+    color: #5d3276;
+    
+}
+
+button{
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    font-family:Verdana, Tahoma, sans-serif;
+    
+    font-size: 105%;
+    background-color: #57bc90;
+}
+
+

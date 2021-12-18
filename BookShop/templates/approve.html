@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+
+<!--Head-->
+
+{% block head %}
+
+<!--The second link just overrides the first one-->
+
+<link rel="stylesheet" href="static/homeStyle.css">
+<link rel="stylesheet" href="static/approveStyle.css">
+
+{% endblock %}
+
+
+<!--Head-->
+
+{% block body %}
+
+<div id="tableContetnt">
+
+    <h2>Verify your order when everything is good than click ok</h2>
+
+    <form class="pform" action="/home" method="post">
+        {% set text = content %}
+
+        {% for x in range( d_data | length )%}
+
+            <div class="tableRow">
+                <p>
+                    {{ text[x]  }}
+                </p>
+
+                <p>
+                    {{ d_data[x] }}
+                </p>
+
+            </div>
+
+        {% endfor %}
+
+        <div class="tableRow">
+            <p>
+                <button name="res" value="ok" type="submit">OK</button>
+            </p>
+
+            <p>
+                <button name="res" value="back" type="submit">Go back</button>
+            </p>
+        </div>
+        
+    </form>
+
+</div> 
+
+{% endblock %}

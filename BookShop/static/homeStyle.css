@@ -1,0 +1,150 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 5px;
+    margin: 20px;
+    font-weight: bold;
+    background-color: #57bc90;
+    
+}
+
+header{
+    background-color: #72c9d4;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+header p.logo{
+    position: absolute;
+    left: 1100px;
+    top: 25px;
+}
+
+
+section{
+    
+    background:  #72c9d4 url(/static/bookImg.jpg) no-repeat top left;
+    font-weight: normal;
+    font-style: italic;
+    height: 220px;
+    font-size: 110%;
+    
+    
+}
+
+section p{
+    padding-left: 180px;
+    padding-right: 80px;
+    line-height: 25px;
+    font-weight: bold;
+}
+
+section h2{
+    color: #76323f;
+    text-align: center;
+}
+
+#tableContetnt{
+    margin-top: 15px;
+    border: 1px dashed #d7cec7;
+    font-family:  'Montserrat';
+    background-color: #72c9d4;
+}
+
+#tableContetnt h2{
+    text-align: center;
+    color: #76323f;
+    font-size: 200%;
+    font-style: italic;
+}
+
+form.pform{
+    display: table;
+    padding: 5px;
+    margin-top: 10px;
+    border-spacing: 15px;
+    font-size: 120%;
+    font-family: sans-serif;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div .tableRow{
+    display: table-row;
+    
+}
+
+div .tableRow p{
+    display: table-cell;
+    vertical-align: top;
+    font-family: "Montserrat";
+   
+}
+
+div .tableRow p:first-child {
+    text-align: right;
+    font-family: sans-serif;
+}
+
+#send{
+    border-radius: 5px;
+    font-size: 105%;
+    font-style: italic;
+    background-color: #0a1612;
+    color:whitesmoke;
+}
+
+#send:hover{
+    color:#57bc90;
+    
+}
+
+input{
+    border: none;
+    width: 200px;
+    padding: 5px;
+    font-weight: normal;
+}
+
+
+#completed{
+    position: absolute;
+    top: 450px;
+    left: 400px;
+    background-color: #494e6b;
+    z-index: 1;
+    border-radius: 4px;
+    
+}
+
+#completed h2{
+    color: white;
+    margin-top: 50px;
+    font-family: "Montserrat";
+    height: 100px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 150%;
+    font-style: italic;
+    
+}
+
+#completed p{
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+
+#completed button{
+    padding: 5px;
+    border-radius: 4px;
+   
+    
+}
+
+button:hover{
+    color: white;
+    background-color: #494e6b;
+    
+}
